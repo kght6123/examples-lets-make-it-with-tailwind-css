@@ -1,0 +1,20 @@
+{
+  "name": "examples-lets-make-it-with-tailwind-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npx http-server . -c-1 -p 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kght6123/examples-lets-make-it-with-tailwind-css.git"
+  },
+  "author": "kght6123",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kght6123/examples-lets-make-it-with-tailwind-css/issues"
+  },
+  "homepage": "https://github.com/kght6123/examples-lets-make-it-with-tailwind-css#readme"
+}
