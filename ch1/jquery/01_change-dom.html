@@ -8,12 +8,15 @@
     <meta name="author" content="kght6123">
   </head>
   <body>
+    <!-- 下記の「Hello World!!!」が「はろーわーるど!!!」になる -->
     <h1 class="header">Hello World!!!</h1>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(function(){
+        // この中はDOMの構築が完了（document ready）になったら、画像など他のデータの読み込みが完了する前に呼ばれる
+        // セレクターに一致するDOMのHTMLを「はろーわーるど!!!」に書き換えます。
         $("h1.header").html("はろーわーるど!!!")
-      })
+      });
     </script>
   </body>
 </html>

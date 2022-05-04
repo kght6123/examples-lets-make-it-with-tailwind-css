@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>jQueryのサンプル</title>
+    <meta name="description" content="薄い本のサンプル">
+    <meta name="author" content="kght6123">
+    <style type="text/css">
+      .redMessage {
+        color: red;
+        font-weight: bold;
+        font-size: xx-large;
+      }
+      .blueMessage {
+        color: lightseagreen;
+        font-weight: bold;
+        font-size: xx-large;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="header">ボタンを押してね！</h1>
+    <div class="container">
+      <!-- 下記のボタンにclickイベントを設定する -->
+      <button class="showMessage">メッセージの色を変える</button>
+      <!-- ボタンを押すと下記のメッセージの色が変わる -->
+      <div id="message-box">色は変わってないよ！</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function(){
+        // セレクターに一致するDOM（メッセージボックス）を変数に設定する
+        const $msgBox = $("#message-box");
+        // セレクターに一致するDOM（ボタン）にclickイベントを設定する
+        $(".container > button").on("click", function(event) {
+          // ボタンがクリックされたら、
+          if ($msgBox.hasClass("redMessage")) {
+            // classにredMessageが設定されているとき
+            // classからredMessageを削除して、blueMessageを追加する
+            $msgBox.removeClass("redMessage");
+            $msgBox.addClass("blueMessage");
+            $msgBox.html("色が青色に変わったよ!!!");
+          } else {
+            // classにredMessageが設定されていないとき
+            // classからblueMessageを削除して、redMessageを追加する
+            $msgBox.removeClass("blueMessage");
+            $msgBox.addClass("redMessage");
+            $msgBox.html("色が赤色に変わったよ!!!");
+          }
+        })
+      })
+    </script>
+  </body>
+</html>

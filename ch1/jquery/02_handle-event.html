@@ -10,15 +10,20 @@
   <body>
     <h1 class="header">ボタンを押してね！</h1>
     <div class="container">
+      <!-- 下記のボタンにclickイベントを設定する -->
       <button class="showMessage">メッセージを表示</button>
+      <!-- ボタンを押すと下記のメッセージが表示される -->
       <div id="message-box" style="display: none;">ボタンが押されたよ！</div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(function(){
-        const msgBox = $("#message-box");
+        // セレクターに一致するDOM（メッセージボックス）を変数に設定する
+        const $msgBox = $("#message-box");
+        // セレクターに一致するDOM（ボタン）にclickイベントを設定する
         $(".container > button").on("click", function(event) {
-          msgBox.show();
+          // ボタンがクリックされたら、メッセージボックスを表示する
+          $msgBox.show();
         })
       })
     </script>

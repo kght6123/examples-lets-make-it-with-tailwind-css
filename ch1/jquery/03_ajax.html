@@ -18,11 +18,15 @@
         $.ajax({
           url: "./api/getWeather.json",
           data: {
-            zipcode: 97201
+            zipcode: 5100018
           },
           success: function(result) {
             $("#message-box").html(JSON.stringify(result));
             $("#message-box").show();
+          },
+          async: true,
+          error: function () {
+            alert("外部データの読み取りに失敗しました。");
           }
         });
       })
