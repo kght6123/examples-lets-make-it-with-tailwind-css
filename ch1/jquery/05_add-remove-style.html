@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>jQueryのサンプル</title>
+    <meta name="description" content="薄い本のサンプル">
+    <meta name="author" content="kght6123">
+  </head>
+  <body>
+    <h1 class="header">ボタンを押してね！</h1>
+    <div class="container">
+      <!-- 下記のボタンにclickイベントを設定する -->
+      <button class="showMessage">メッセージの色を変える</button>
+      <!-- ボタンを押すと下記のメッセージの色が変わる -->
+      <div id="message-box">色は変わってないよ！</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function(){
+        let mode = "";
+        // セレクターに一致するDOM（メッセージボックス）を変数に設定する
+        const $msgBox = $("#message-box");
+        // セレクターに一致するDOM（ボタン）にclickイベントを設定する
+        $(".container > button").on("click", function(event) {
+          // ボタンがクリックされたら、
+          if (mode === "red") {
+            // cssのcolorがredとき
+            mode = "lightseagreen"
+            // 文字色を一番大きい青太字にする
+            $msgBox.css("color", "lightseagreen");
+            $msgBox.css("font-weight", "bold");
+            $msgBox.css("font-size", "xx-large");
+            $msgBox.html(`色が青色に変わったよ!!! [${$msgBox.css("color")}]`);
+          } else {
+            // cssのcolorがred以外とき
+            mode = "red"
+            // 文字色を一番大きい赤太字にする
+            $msgBox.css("color", "red");
+            $msgBox.css("font-weight", "bold");
+            $msgBox.css("font-size", "xx-large");
+            $msgBox.html(`色が赤色に変わったよ!!! [${$msgBox.css("color")}]`);
+          }
+        })
+      })
+    </script>
+  </body>
+</html>
