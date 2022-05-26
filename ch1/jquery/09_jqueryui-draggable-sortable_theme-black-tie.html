@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>jQueryのサンプル</title>
+    <meta name="description" content="薄い本のサンプル">
+    <meta name="author" content="kght6123">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/black-tie/jquery-ui.css">
+    <style type="text/css">
+      ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+      li { margin: 5px; padding: 5px; width: 150px; }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li id="draggable" class="ui-state-highlight">下のほうにドラッグしてね！</li>
+    </ul>
+    <ul id="sortable">
+      <li class="ui-state-default">アイテム1</li>
+      <li class="ui-state-default">アイテム2</li>
+      <li class="ui-state-default">アイテム3</li>
+      <li class="ui-state-default">アイテム4</li>
+      <li class="ui-state-default">アイテム5</li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+        $("#sortable").sortable({
+          revert: true
+        });
+        $("#draggable").draggable({
+          connectToSortable: "#sortable",
+          helper: "clone",
+          revert: "invalid"
+        });
+        $("ul, li").disableSelection();
+      })
+    </script>
+  </body>
+</html>
