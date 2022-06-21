@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kght6123/examples-lets-make-it-with-tailwind-css/issues"
   },
-  "homepage": "https://github.com/kght6123/examples-lets-make-it-with-tailwind-css#readme"
+  "homepage": "https://github.com/kght6123/examples-lets-make-it-with-tailwind-css#readme",
+  "volta": {
+    "node": "18.3.0"
+  }
 }
