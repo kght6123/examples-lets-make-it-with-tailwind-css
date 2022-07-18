@@ -10,12 +10,6 @@
     <style type="text/css"></style>
   </head>
   <body class="border border-3 border-info vh-100 p-3" style="box-sizing: border-box;">
-    <div class="alert alert-primary" role="alert">
-      ユーザ登録を完了させてください。
-    </div>
-    <div class="alert alert-danger d-none" role="alert">
-      入力内容にエラーがあります。
-    </div>
     <form class="needs-validation" novalidate>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">メールアドレス</label>
@@ -55,7 +49,6 @@
       (function () {
         'use strict'
         var forms = document.querySelectorAll('.needs-validation')
-        var alerts = document.querySelectorAll('.alert.alert-danger')
  
         Array.prototype.slice.call(forms)
           .forEach(function (form) {
@@ -63,9 +56,6 @@
               if (!form.checkValidity()) {
                 event.preventDefault()
                 event.stopPropagation()
-                Array.prototype.slice.call(alerts).forEach(function (alert) {
-                  alert.classList.remove('d-none')
-                })
               }
               form.classList.add('was-validated')
             }, false)
