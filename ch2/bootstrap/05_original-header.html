@@ -13,35 +13,63 @@
       crossorigin="anonymous"
     />
     <style type="text/css">
-      // X-Small devices (portrait phones, less than 576px)
-      @media (max-width: 575.98px) {
+      /* X-Small devices (portrait phones, less than 576px) */
+      /* No media query for `xs` since this is the default in Bootstrap */
+      .h-carousel {
+        height: 33vh;
+      }
+      .h-card-img {
+        height: 16rem;
+      }
+      .h-card-img-wrapper {
+        height: 6rem;
+      }
+      .card-title {
+        font-size: small;
+      }
+      .card-text {
+        font-size: x-small;
+      }
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) {
 
       }
-      // Small devices (landscape phones, less than 768px)
-      @media (max-width: 767.98px) {
+      /* Medium devices (tablets, 768px and up) */
+      @media (min-width: 768px) {
+        .h-carousel {
+          height: 40vh;
+        }
+        .h-card-img {
+          height: 12rem;
+        }
+        .h-card-img-wrapper {
+          height: auto;
+        }
+        .card-title {
+          font-size: medium;
+        }
+        .card-text {
+          font-size: small;
+        }
+      }
+      /* Large devices (desktops, 992px and up) */
+      @media (min-width: 992px) {
 
       }
-      // Medium devices (tablets, less than 992px)
-      @media (max-width: 991.98px) {
+      /* X-Large devices (large desktops, 1200px and up) */
+      @media (min-width: 1200px) {
 
       }
-      // Large devices (desktops, less than 1200px)
-      @media (max-width: 1199.98px) {
+      /* XX-Large devices (larger desktops, 1400px and up) */
+      @media (min-width: 1400px) {
 
       }
-      // X-Large devices (large desktops, less than 1400px)
-      @media (max-width: 1399.98px) {
-
-      }
-      // XX-Large devices (larger desktops)
-      // No media query since the xxl breakpoint has no upper bound on its width
-      
     </style>
   </head>
-  <body class="text-light px-2" style="background-color: var(--bs-gray-800); padding-top: 4rem; padding-bottom: 4.25rem;">
+  <body class="text-light px-2 container-md" style="background-color: var(--bs-gray-800); padding-top: 4rem; padding-bottom: 3.25rem;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2 position-fixed top-0 w-100 start-0" style="z-index: 1030;">
       <div class="container-fluid">
-        <a class="navbar-brand text-light" href="#">Navbar</a>
+        <a class="navbar-brand text-light fs-6" href="#">Navbar</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -56,14 +84,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+              <a class="nav-link active text-light fs-6" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Link</a>
+              <a class="nav-link text-light fs-6" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle text-light"
+                class="nav-link dropdown-toggle text-light fs-6"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -72,16 +100,16 @@
                 Dropdown
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item text-light" href="#">Action</a></li>
-                <li><a class="dropdown-item text-light" href="#">Another action</a></li>
+                <li><a class="dropdown-item text-light fs-6" href="#">Action</a></li>
+                <li><a class="dropdown-item text-light fs-6" href="#">Another action</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item text-light" href="#">Something else here</a>
+                  <a class="dropdown-item text-light fs-6" href="#">Something else here</a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled text-light">Disabled</a>
+              <a class="nav-link disabled text-light fs-6">Disabled</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -102,13 +130,13 @@
       <div id="carouselExampleControls" class="carousel slide mw-100" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://www.pakutaso.com/shared/img/thumb/03ellyri529G_TP_V4.jpg" class="d-block w-auto" style="height: 40vh;" alt="...">
+            <img src="https://www.pakutaso.com/shared/img/thumb/03ellyri529G_TP_V4.jpg" class="d-block w-auto h-carousel" style="" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://www.pakutaso.com/shared/img/thumb/02ellyri529E_TP_V4.jpg" class="d-block w-auto" style="height: 40vh;" alt="...">
+            <img src="https://www.pakutaso.com/shared/img/thumb/02ellyri529E_TP_V4.jpg" class="d-block w-auto h-carousel" style="" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://www.pakutaso.com/shared/img/thumb/17ellyri529H_TP_V4.jpg" class="d-block w-auto" style="height: 40vh;" alt="...">
+            <img src="https://www.pakutaso.com/shared/img/thumb/17ellyri529H_TP_V4.jpg" class="d-block w-auto h-carousel" style="" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -123,12 +151,12 @@
     </div>
     <div class="d-flex justify-content-center align-items-center">
       <div class="container-fluid">
-        <div class="row gx-2 gy-2">
+        <div class="row gx-2">
           <div class="col">
-            <div class="card mb-3 w-100 bg-dark" style="max-width: 100%;">
+            <div class="card mb-2 bg-dark" style="max-width: 100%;">
               <div class="row g-0">
-                <div class="col-md-4 overflow-hidden d-flex justify-content-center align-items-center">
-                  <img class="" style="height: 12rem;" src="https://www.pakutaso.com/shared/img/thumb/19ellyri529G_TP_V4.jpg" alt="...">
+                <div class="col-md-4 h-card-img-wrapper overflow-hidden d-flex justify-content-center align-items-center">
+                  <img class="h-card-img" src="https://www.pakutaso.com/shared/img/thumb/19ellyri529G_TP_V4.jpg" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -141,10 +169,10 @@
             </div>
           </div>
           <div class="col">
-            <div class="card mb-3 w-100 bg-dark" style="max-width: 100%;">
+            <div class="card mb-2 bg-dark" style="max-width: 100%;">
               <div class="row g-0">
-                <div class="col-md-4 overflow-hidden d-flex justify-content-center align-items-center">
-                  <img class="" style="height: 12rem;" src="https://www.pakutaso.com/shared/img/thumb/24ellyri529A_TP_V4.jpg" alt="...">
+                <div class="col-md-4 h-card-img-wrapper overflow-hidden d-flex justify-content-center align-items-center">
+                  <img class="h-card-img" src="https://www.pakutaso.com/shared/img/thumb/24ellyri529A_TP_V4.jpg" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -159,10 +187,10 @@
         </div>
         <div class="row gx-2">
           <div class="col">
-            <div class="card mb-3 w-100 bg-dark" style="max-width: 100%;">
+            <div class="card mb-2 bg-dark" style="max-width: 100%;">
               <div class="row g-0">
-                <div class="col-md-4 overflow-hidden d-flex justify-content-center align-items-center">
-                  <img class="" style="height: 12rem;" src="https://www.pakutaso.com/shared/img/thumb/25ellyri529G_TP_V4.jpg" alt="...">
+                <div class="col-md-4 h-card-img-wrapper overflow-hidden d-flex justify-content-center align-items-center">
+                  <img class="h-card-img" src="https://www.pakutaso.com/shared/img/thumb/25ellyri529G_TP_V4.jpg" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -175,10 +203,10 @@
             </div>
           </div>
           <div class="col">
-            <div class="card mb-3 w-100 bg-dark" style="max-width: 100%;">
+            <div class="card mb-2 bg-dark" style="max-width: 100%;">
               <div class="row g-0">
-                <div class="col-md-4 overflow-hidden d-flex justify-content-center align-items-center">
-                  <img class="" style="height: 12rem;" src="https://www.pakutaso.com/shared/img/thumb/32ellyri529F_TP_V4.jpg" alt="...">
+                <div class="col-md-4 h-card-img-wrapper overflow-hidden d-flex justify-content-center align-items-center">
+                  <img class="h-card-img" src="https://www.pakutaso.com/shared/img/thumb/32ellyri529F_TP_V4.jpg" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -193,10 +221,10 @@
         </div>
         <div class="row gx-2">
           <div class="col">
-            <div class="card mb-3 w-100 bg-dark" style="max-width: 100%;">
+            <div class="card mb-3 bg-dark" style="max-width: 100%;">
               <div class="row g-0">
-                <div class="col-md-4 overflow-hidden d-flex justify-content-center align-items-center">
-                  <img class="" style="height: 12rem;" src="https://www.pakutaso.com/shared/img/thumb/46ellyri529F_TP_V4.jpg" alt="...">
+                <div class="col-md-4 h-card-img-wrapper overflow-hidden d-flex justify-content-center align-items-center">
+                  <img class="h-card-img" src="https://www.pakutaso.com/shared/img/thumb/46ellyri529F_TP_V4.jpg" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -209,10 +237,10 @@
             </div>
           </div>
           <div class="col">
-            <div class="card mb-3 w-100 bg-dark" style="max-width: 100%;">
+            <div class="card mb-3 bg-dark" style="max-width: 100%;">
               <div class="row g-0">
-                <div class="col-md-4 overflow-hidden d-flex justify-content-center align-items-center">
-                  <img class="" style="height: 12rem;" src="https://www.pakutaso.com/shared/img/thumb/02ellyri529H_TP_V4.jpg" alt="...">
+                <div class="col-md-4 h-card-img-wrapper overflow-hidden d-flex justify-content-center align-items-center">
+                  <img class="h-card-img" src="https://www.pakutaso.com/shared/img/thumb/02ellyri529H_TP_V4.jpg" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -228,7 +256,7 @@
       </div>
     </div>
     <footer class="position-fixed bottom-0 w-100 start-0" style="z-index: 1030;">
-      <div class="container-fluid d-flex justify-content-center align-items-center bg-dark" style="height: 8vh;">
+      <div class="container-fluid d-flex justify-content-center align-items-center bg-dark" style="height: 8vh; font-size: xx-small;">
         © 2022.07.29 kght6123
       </div>
     </footer>
