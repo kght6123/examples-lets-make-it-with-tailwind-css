@@ -1,5 +1,5 @@
-import { h } from '../pragma';
-import { LikeComponent } from './like';
+import { h } from '../pragma'
+import { LikeComponent } from './like'
 
 export const App = (
   <main className="hello">
@@ -8,4 +8,4 @@ export const App = (
     </h1>
     <LikeComponent big />
   </main>
-);
+)

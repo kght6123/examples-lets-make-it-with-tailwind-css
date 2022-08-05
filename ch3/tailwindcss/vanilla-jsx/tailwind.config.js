@@ -8,4 +8,7 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  // corePlugins: {
+  //   preflight: false, // modern-normalize の無効化
+  // },
 }

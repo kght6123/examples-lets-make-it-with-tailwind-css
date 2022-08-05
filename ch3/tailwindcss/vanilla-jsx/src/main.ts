@@ -1,6 +1,6 @@
 import './style.css';
 import { App } from './components/app';
-import './index.css'
+// import './index.css'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
