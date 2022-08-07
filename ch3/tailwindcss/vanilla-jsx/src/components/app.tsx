@@ -7,5 +7,7 @@ export const App = (
       Hello Vanilla TSX + Tailwind CSS!
     </h1>
     <LikeComponent big />
+    <p class="text-2xs">sample app.</p>
+    <p class="text-3xs">copyright, kght6123.</p>
   </main>
 )
