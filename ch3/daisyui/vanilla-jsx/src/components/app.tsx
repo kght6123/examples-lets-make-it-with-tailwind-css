@@ -18,7 +18,7 @@ export const App = (
         <div class="max-w-md">
           <h1 class="text-5xl font-bold">Hello Vanilla TSX + daisyUI!</h1>
           <p class="py-6">sample daisyui app<LikeComponent big={true} /></p>
-          <label for="my-modal" class="btn btn-primary modal-button">Get Started!</label>
+          <label for="my-modal" class="btn btn-primary modal-button border-2 border-solid border-gray-100 rounded-full">Get Started!</label>
         </div>
       </div>
     </div>
