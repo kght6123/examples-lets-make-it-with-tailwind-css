@@ -15,6 +15,7 @@ export const App = ({
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1 className='TomatoTitle'>React + Styled JSX</h1>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -29,9 +30,9 @@ export const App = ({
         <button>{children}</button>
       </header>
       <style jsx>{`
-      p {
-        color: red;
-      }
+        p {
+          color: red;
+        }
       `}</style>
       <style jsx>{`
         button {
@@ -44,6 +45,11 @@ export const App = ({
         button {
           padding: ${large ? '50' : '20'}px;
           background: ${background};
+        }
+        .TomatoTitle {
+          font-size: ${large ? '2.5rem' : '1.5rem'};
+          text-align: center;
+          color: tomato;
         }
       `}</style>
     </div>
