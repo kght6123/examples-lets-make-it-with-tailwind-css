@@ -3,15 +3,22 @@ import styled from 'styled-components'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
-
-function App() {
+export const App = ({
+  children,
+  large = false,
+}: {
+  children?: React.ReactNode
+  large?: boolean
+}): JSX.Element => {
   const [count, setCount] = useState(0)
-
+  const Title = styled.h1`
+    font-size: ${large ? '2.5rem' : '1.5rem'};
+    text-align: center;
+    color: palevioletred;
+  `
+  const TomatoTitle = styled(Title)`
+    color: tomato;
+  `
   return (
     <div className="App">
       <div>
@@ -22,7 +29,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <Title>Vite + React + Styled Components</Title>
+      <TomatoTitle>Vite + React + Styled Components</TomatoTitle>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
