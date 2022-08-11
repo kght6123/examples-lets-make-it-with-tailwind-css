@@ -18,6 +18,9 @@ export const App = ({
   `
   const TomatoTitle = styled(Title)`
     color: tomato;
+    @media(min-width: 500px) {
+      color: red;
+    }
   `
   return (
     <div className="App">

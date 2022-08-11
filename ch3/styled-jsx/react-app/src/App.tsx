@@ -46,10 +46,17 @@ export const App = ({
           padding: ${large ? '50' : '20'}px;
           background: ${background};
         }
-        .TomatoTitle {
+        h1 {
           font-size: ${large ? '2.5rem' : '1.5rem'};
           text-align: center;
+        }
+        .TomatoTitle {
           color: tomato;
+        }
+        @media(min-width: 500px) {
+          .TomatoTitle {
+            color: red;
+          }
         }
       `}</style>
     </div>

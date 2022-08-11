@@ -3,7 +3,13 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import classes from './App.module.css'
 
-function App() {
+export const App = ({
+  children,
+  large = false,
+}: {
+  children?: React.ReactNode
+  large?: boolean
+}): JSX.Element => {
   const [count, setCount] = useState(0)
 
   return (
@@ -16,7 +22,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1 className={classes.red}>Vite + React + CSS Modules</h1>
+      <h1 className={`${classes.tomatoTitle} ${large ? classes.large : ''}`}>Vite + React + CSS Modules</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
