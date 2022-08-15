@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
 
 // scss-docs-start import-stack
 // Configuration
@@ -72,7 +72,7 @@ $utilities: map-merge(
     ),
     "text-opacity": (
       css-var: true,
-      css-variable-name: text-opacity,
+      css-variable-name: text-opacity, // 既存のCSS変数を書き換えられる。また、独自のlocal-varsを使ったユーティリティを作ることで、ユーザ定義のCSS変数も書き換えられる。
       class: text-opacity,
       values: (
         25: .25,
@@ -98,8 +98,11 @@ $utilities: map-merge(
     "backdrop": (
       responsive: true,
       property: -webkit-backdrop-filter, // ベンダープリフィックス
+      local-vars: (
+        "backdrop-blur": 8px
+      ),
       class: backdrop,
-      values: (blur: blur(8px))
+      values: (blur: blur(var(--bs-backdrop-blur)))
     ),
   )
 );
