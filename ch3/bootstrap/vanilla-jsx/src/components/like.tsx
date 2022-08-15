@@ -6,7 +6,7 @@ interface LikeProps {
 
 export function LikeComponent({ big = false }: LikeProps) {
   return (
-    <span className={`${big ? 'text-3xl' : ''}`}>
+    <span className={`${big ? 'fs-1' : ''}`}>
       👍
     </span>
   );
