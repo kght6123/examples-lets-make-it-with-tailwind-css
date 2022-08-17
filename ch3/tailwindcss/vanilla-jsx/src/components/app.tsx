@@ -3,7 +3,7 @@ import { LikeComponent } from './like'
 
 export const App = (
   <main>
-    <h1 class="text-3xl font-bold underline">
+    <h1 class="text-3xl font-bold underline sm:hover:opacity-50">
       Hello Vanilla TSX + Tailwind CSS!
     </h1>
     <LikeComponent big={true} />

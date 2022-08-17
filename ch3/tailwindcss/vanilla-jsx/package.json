@@ -5,7 +5,7 @@
     "dev": "npm run tw:jit && concurrently \"npm run tw:watch:jit\" \"vite\"",
     "tw:jit": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.dist.css --jit",
     "tw:watch:jit": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.dist.css --watch --jit",
-    "build": "npm run build:tw && tsc && vite build",
+    "build": "npm run tw:jit:minify && tsc && vite build",
     "tw:jit:minify": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.dist.css --jit --minify",
     "serve": "npm run build:tw && vite preview"
   },

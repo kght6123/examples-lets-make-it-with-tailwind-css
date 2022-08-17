@@ -95,14 +95,29 @@ $utilities: map-merge(
       property: flex,
       values: (fill: 1 1 auto) // 複数の値指定とか
     ),
+    "backdrop-blur": (
+      css-var: true,
+      css-variable-name: backdrop-blur, // 既存のCSS変数を書き換えられる。また、独自のlocal-varsを使ったユーティリティを作ることで、ユーザ定義のCSS変数も書き換えられる。
+      class: backdrop-blur,
+      values: (
+        none: 0,
+        sm: 4px,
+        null: 8px,
+        md: 12px,
+        lg: 16px,
+        xl: 24px,
+        2xl: 40px,
+        3xl: 64px,
+      )
+    ),
     "backdrop": (
       responsive: true,
-      property: -webkit-backdrop-filter, // ベンダープリフィックス
-      local-vars: (
-        "backdrop-blur": 8px
-      ),
+      property: -webkit-backdrop-filter backdrop-filter, // ベンダープリフィックス
+      // local-vars: (
+      //   "backdrop-blur": 8px
+      // ),
       class: backdrop,
-      values: (blur: blur(var(--bs-backdrop-blur)))
+      values: (null: blur(var(--bs-backdrop-blur)))
     ),
   )
 );
