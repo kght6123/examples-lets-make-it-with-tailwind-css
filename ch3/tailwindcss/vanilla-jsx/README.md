@@ -9,9 +9,9 @@ The app is a proof-of-concept of how you can use the JSX in vanilla TypeScript +
 
 This project is for you, if you:
 
-* ⚛️ Have experience with React, but no idea about how it handles JSX
-* 🕵️‍♂️ Curious about front-end fundamentals
-* 🤓 A geek who loves vanilla TypeScript and all around it
+- ⚛️ Have experience with React, but no idea about how it handles JSX
+- 🕵️‍♂️ Curious about front-end fundamentals
+- 🤓 A geek who loves vanilla TypeScript and all around it
 
 ## How to run?
 
@@ -47,13 +47,13 @@ The flowchart shows that, to get the vanilla JS code from JSX, we need to instru
 And Vite requires the following `vite.config.ts`:
 
 ```ts
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
   esbuild: {
-    jsxFactory: 'h',
-    jsxFragment: 'Fragment'
-  }
+    jsxFactory: "h",
+    jsxFragment: "Fragment",
+  },
 });
 ```
 
@@ -68,16 +68,16 @@ type Children = (Node | string)[];
 
 export const h = (tag: Tag, props: Props, ...children: Children) => {
   // If the tag is a function component, pass props and children inside it
-  if (typeof tag === 'function') {
-    return tag({ ... props }, children);
+  if (typeof tag === "function") {
+    return tag({ ...props }, children);
   }
 
   // Create the element and add attributes to it
   const el = document.createElement(tag);
   if (props) {
     Object.entries(props).forEach(([key, val]) => {
-      if (key === 'className') {
-        el.classList.add(...(val as string || '').trim().split(' '));
+      if (key === "className") {
+        el.classList.add(...((val as string) || "").trim().split(" "));
         return;
       }
 

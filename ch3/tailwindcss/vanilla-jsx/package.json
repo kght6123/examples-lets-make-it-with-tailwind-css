@@ -7,12 +7,15 @@
     "tw:watch:jit": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.dist.css --watch --jit",
     "build": "npm run tw:jit:minify && tsc && vite build",
     "tw:jit:minify": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.dist.css --jit --minify",
-    "serve": "npm run build:tw && vite preview"
+    "serve": "npm run build:tw && vite preview",
+    "format": "npx prettier --write ."
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
     "concurrently": "^7.3.0",
     "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.7.4",
     "vite": "^3.0.4"

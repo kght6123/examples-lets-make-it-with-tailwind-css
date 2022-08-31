@@ -1,5 +1,5 @@
-import { h } from '../pragma'
-import { LikeComponent } from './like'
+import { h } from "../pragma";
+import { LikeComponent } from "./like";
 
 export const App = (
   <main>
@@ -10,4 +10,4 @@ export const App = (
     <p class="text-2xs">sample app.</p>
     <p class="text-3xs">copyright, kght6123.</p>
   </main>
-)
+);

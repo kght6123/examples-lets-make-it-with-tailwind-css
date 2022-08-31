@@ -1,13 +1,9 @@
-import { h } from '../pragma';
+import { h } from "../pragma";
 
 interface LikeProps {
-  big: boolean,
+  big: boolean;
 }
 
 export function LikeComponent({ big = false }: LikeProps) {
-  return (
-    <span className={`${big ? 'text-3xl' : ''}`}>
-      👍
-    </span>
-  );
+  return <span className={`${big ? "text-3xl" : ""}`}>👍</span>;
 }
