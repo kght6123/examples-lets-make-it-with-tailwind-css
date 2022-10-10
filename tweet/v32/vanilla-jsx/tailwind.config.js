@@ -12,7 +12,7 @@ module.exports = {
     },
   },
   plugins: [],
-  // corePlugins: {
-  //   preflight: false, // modern-normalize の無効化
-  // },
+  corePlugins: {
+    preflight: false, // modern-normalize の無効化
+  },
 };
